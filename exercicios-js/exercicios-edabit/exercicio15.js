@@ -3,7 +3,7 @@
 const findEvenNums = number => {
   let arrayToBeFiltered = [];
   for (let i = 1; i <= number; i++) {
-    arrayToBeFiltered.push(i);
+    arrayToBeFiltered = [...arrayToBeFiltered, i];
   }
   return arrayToBeFiltered.filter(item => item % 2 == 0);
 };
