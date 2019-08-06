@@ -17,15 +17,24 @@ app.get("/produtos/:id", (req, res, next) => {
   res.send(database.getProduto(id));
 });
 
-app.put("/produtos/:id", (req, res, next) => {
-  const { id } = req.params;
-  res.send(database.updateProduto(id));
+app.put("/produtos", (req, res, next) => {
+  res.send(
+    database.salvarProduto({
+      id: req.params.id,
+      nome: req.body.nome,
+      preco: req.body.preco
+    })
+  );
 });
 
 app.post("/produtos", (req, res, next) => {
   res.send(
     database.salvarProduto({ nome: req.body.nome, preco: req.body.preco })
   );
+});
+
+app.delete("/produtos/:id", (req, res, next) => {
+  res.send(database.excluirProduto(req.params.id));
 });
 
 app.listen(porta, () => {

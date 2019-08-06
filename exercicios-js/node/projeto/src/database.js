@@ -13,10 +13,6 @@ const salvarProduto = produto => {
   return produto;
 };
 
-const updateProduto = produto => {
-  if (!produto.id) produto.id = sequence.id;
-};
-
 const getProduto = id => {
   return produtos[id] || {};
 };
@@ -25,8 +21,15 @@ const getProdutos = () => {
   return Object.values(produtos);
 };
 
+const excluirProduto = id => {
+  const produto = produtos[id];
+  delete produtos[id];
+  return produto;
+};
+
 module.exports = {
   salvarProduto,
   getProduto,
-  getProdutos
+  getProdutos,
+  excluirProduto
 };
