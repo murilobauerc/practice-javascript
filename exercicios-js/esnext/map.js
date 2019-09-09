@@ -3,7 +3,10 @@
 const tecnologias = new Map();
 tecnologias.set("react", { framework: false });
 tecnologias.set("angular", { framework: true });
+tecnologias.set("Internacional", { teste: true });
+console.log(tecnologias.get("Internacional").anoTitulo);
 
+console.log(tecnologias.get("react"));
 console.log(tecnologias.get("react").framework);
 
 const chavesVariadas = new Map([
