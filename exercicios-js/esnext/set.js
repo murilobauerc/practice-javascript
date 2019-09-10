@@ -18,3 +18,6 @@ console.log(times.has("Vasco"));
 const nomes = ["Raquel", "Lucas", "Julia", "Lucas"];
 const nomesSet = new Set(nomes);
 console.log(nomesSet);
+
+const times2 = new Set(["João", "Murilo", "João"]);
+console.log(times2);

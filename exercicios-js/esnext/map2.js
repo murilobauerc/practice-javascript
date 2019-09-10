@@ -26,8 +26,8 @@ times.set("Internacional", {
 });
 
 // console.log(times.get("Internacional").titulos);
-// times.forEach(time => console.log(time.titulos));
+times.forEach(time => console.log(time.titulos));
 
-for (let time of times.values()) {
-  console.log(time.titulos[0].nome);
+for (let [chave, valor] of times.entries()) {
+  console.log(chave, valor);
 }

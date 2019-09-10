@@ -10,3 +10,7 @@ console.log(clone);
 const grupoA = ["João", "Pedro", "Gloria"];
 const grupoFinal = ["Maria", ...grupoA, "Rafaela"];
 console.log(grupoFinal);
+
+const sum = (...args) => [...args].reduce((a, b) => a + b, 0);
+
+console.log(sum(0, 2, 3, 4));
