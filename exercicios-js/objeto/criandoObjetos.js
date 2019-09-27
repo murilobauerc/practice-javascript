@@ -43,5 +43,5 @@ filha.nome = "Ana";
 console.log(filha);
 
 // Uma função famosa que retorna Objeto...
-const fromJSON = JSON.parse({info: "Sou um JSON" });
+const fromJSON = JSON.parse({ info: "Sou um JSON" });
 console.log(fromJSON.info);

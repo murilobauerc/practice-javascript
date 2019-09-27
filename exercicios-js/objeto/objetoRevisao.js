@@ -4,12 +4,12 @@ produto.nome = "Cadeira";
 produto["marca do produto"] = "Generica";
 produto.preco = 220;
 
-console.log(produto);
+// console.log(produto);
 
 delete produto.preco;
 delete produto["marca do produto"];
 
-console.log(produto);
+// console.log(produto);
 
 const carro = {
   modelo: "A4",
@@ -44,6 +44,6 @@ console.log(carro);
 delete carro.condutores;
 delete carro.proprietario.endereco;
 delete carro.calcularValorSeguro;
-console.log(carro);
-console.log(carro.condutores);
-console.log(carro.condutores.length); // erro
+// console.log(carro);
+// console.log(carro.condutores);
+// console.log(carro.condutores.length); // erro
