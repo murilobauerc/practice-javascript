@@ -21,3 +21,5 @@ console.log(nomesSet);
 
 const times2 = new Set(["João", "Murilo", "João"]);
 console.log(times2);
+
+const nomes3 = ["Raquel"]

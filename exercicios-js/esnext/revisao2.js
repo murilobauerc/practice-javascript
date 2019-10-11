@@ -29,3 +29,9 @@ function total(...numeros) {
 }
 
 console.log(total(2, 3, 4, 5));
+
+function log(texto = "Hello World!!") {
+  console.log(texto);
+}
+
+log();
