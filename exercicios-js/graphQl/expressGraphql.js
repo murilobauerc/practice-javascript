@@ -4,6 +4,8 @@ var { buildSchema } = require("graphql");
 var uniqid = require("uniqid");
 
 var userList = [];
+
+// type "Query" é responsável pela entrada das queries.
 var schema = buildSchema(`
 
 type User {
@@ -13,7 +15,7 @@ type User {
     age: Int
 }
 
-type Query {
+type Query { 
     users(gender : String): [User]
     user(id: String): User
 }
@@ -23,6 +25,15 @@ type Mutation{
 }
 
 `);
+
+// const singleUserResolver = (root, args, context) => {
+//   const { uniqid } = args;
+//   const { knex } = context;
+
+//   return knex("user")
+//     .where({ uniqid })
+//     .first();
+// };
 
 const getUser = args => {
   console.log(args);
@@ -45,10 +56,13 @@ const getUsers = args => {
   return userList;
 };
 
+const editUser = args => {};
+
 var root = {
   user: getUser,
   users: getUsers,
-  add: addUsers
+  add: addUsers,
+  edit: editUser
 };
 
 var app = express();
