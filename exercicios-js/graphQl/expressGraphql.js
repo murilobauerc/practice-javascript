@@ -6,8 +6,8 @@ var uniqid = require("uniqid");
 var userList = [];
 
 // type "Query" é responsável pela entrada das queries.
+// SDL - Schema Definition Language - Core of any GraphQL project.
 var schema = buildSchema(`
-
 type User {
     id: String
     name: String
@@ -21,19 +21,10 @@ type Query {
 }
 
 type Mutation{
-    add(name: String!, gender: String!, age: Int!): User
+    addUser(name: String, gender: String, age: Int): User
 }
 
 `);
-
-// const singleUserResolver = (root, args, context) => {
-//   const { uniqid } = args;
-//   const { knex } = context;
-
-//   return knex("user")
-//     .where({ uniqid })
-//     .first();
-// };
 
 const getUser = args => {
   console.log(args);
